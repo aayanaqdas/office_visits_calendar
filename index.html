@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comono Kontortider</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Comono</h2>
+      <ul class="nav-menu">
+        <li class="nav-item active">Kalender</li>
+        <li class="nav-item">Nav</li>
+        <li class="nav-item">Nav</li>
+        <li class="nav-item">Innstillinger</li>
+      </ul>
+
+      <!-- Brukerprofil -->
+      <div class="user-profile">
+        <div class="user-avatar">AA</div>
+        <div>
+          <div>Aayan Aqdas</div>
+          <div class="user-email">aayan@comono.no</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hovedinnhold -->
+    <div class="main-content">
+      <div class="calendar-container">
+        <header>
+          <div class="month-week-wrapper">
+            <h2>Mars 2025</h2>
+            <div class="select-week">
+              <button id="prevWeekBtn">&#8249;</button>
+              <p>Uke 10</p>
+              <button id="nextWeekBtn">&#8250;</button>
+            </div>
+          </div>
+          <div class="add-event" id="addEventBtn">&#43; Legg til</div>
+        </header>
+        <table class="calendar">
+          <thead>
+            <tr>
+              <th>
+                <div class="date">10</div>
+                <div class="day">Mandag</div>
+              </th>
+              <th>
+                <div class="date">11</div>
+                <div class="day">Tirsdag</div>
+              </th>
+              <th>
+                <div class="date">12</div>
+                <div class="day">Onsdag</div>
+              </th>
+              <th>
+                <div class="date">13</div>
+                <div class="day">Torsdag</div>
+              </th>
+              <th>
+                <div class="date">14</div>
+                <div class="day">Fredag</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="event">
+                  <div class="event-title">Aayan Aqdas</div>
+                  <div class="event-details">10:00 - 15:00</div>
+                </div>
+              </td>
+              <td>
+                <div class="event">
+                  <div class="event-title">Aayan Aqdas</div>
+                  <div class="event-details">10:00 - 15:00</div>
+                </div>
+                <div class="event">
+                  <div class="event-title">Aayan Aqdas</div>
+                  <div class="event-details">10:00 - 15:00</div>
+                </div>
+                <div class="event">
+                  <div class="event-title">Aayan Aqdas</div>
+                  <div class="event-details">10:00 - 15:00</div>
+                </div>
+                <div class="event">
+                  <div class="event-title">Aayan Aqdas</div>
+                  <div class="event-details">10:00 - 15:00</div>
+                </div>
+                <div class="event">
+                  <div class="event-title">Aayan Aqdas</div>
+                  <div class="event-details">10:00 - 15:00</div>
+                </div>
+                <div class="event">
+                  <div class="event-title">Aayan Aqdas</div>
+                  <div class="event-details">10:00 - 15:00</div>
+                </div>
+              </td>
+              <td>
+                <div class="event">
+                  <div class="event-title">Aayan Aqdas</div>
+                  <div class="event-details">10:00 - 15:00</div>
+                </div>
+                <div class="event">
+                  <div class="event-title">Aayan Aqdas</div>
+                  <div class="event-details">10:00 - 15:00</div>
+                </div>
+                <div class="event">
+                  <div class="event-title">Aayan Aqdas</div>
+                  <div class="event-details">10:00 - 15:00</div>
+                </div>
+                <div class="event">
+                  <div class="event-title">Aayan Aqdas</div>
+                  <div class="event-details">10:00 - 15:00</div>
+                </div>
+              </td>
+              <td>
+                <div class="event">
+                  <div class="event-title">Aayan Aqdas</div>
+                  <div class="event-details">10:00 - 15:00</div>
+                </div>
+              </td>
+              <td>
+                <div class="event">
+                  <div class="event-title">Aayan Aqdas</div>
+                  <div class="event-details">10:00 - 15:00</div>
+                </div>
+                <div class="event">
+                  <div class="event-title">Aayan Aqdas</div>
+                  <div class="event-details">10:00 - 15:00</div>
+                </div>
+                <div class="event">
+                  <div class="event-title">Aayan Aqdas</div>
+                  <div class="event-details">10:00 - 15:00</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Modal for registrering -->
+      <div class="modal-overlay" id="modalOverlay"></div>
+      <div class="registration-modal" id="registrationModal">
+        <div class="modal-header">
+          <h3>Registrer kontorbesøk</h3>
+          <button onclick="closeModal()" class="close-btn">&times;</button>
+        </div>
+        <div class="form-group">
+          <label>Dato</label>
+          <input type="date" id="visitDate" />
+        </div>
+        <div class="form-group">
+          <label>Fra-tid</label>
+          <input type="time" id="startTime" />
+        </div>
+        <div class="form-group">
+          <label>Til-tid</label>
+          <input type="time" id="endTime" />
+        </div>
+        <button class="add-event" onclick="submitDate()">Lagre</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
