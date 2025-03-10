@@ -1,3 +1,5 @@
+--MySQL Database
+
 CREATE DATABASE comono;
 USE comono;
 
